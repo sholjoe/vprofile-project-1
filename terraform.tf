@@ -27,10 +27,10 @@ terraform {
   }
 
   backend "s3" {
-    bucket         	   = "terra-eks12"
+    bucket         	   = "terra-eks88"
     key              	   = "state/terraform.tfstate"
     region         	   = "us-east-1"
   }
 
-  required_version = "~> 1.3"
+  required_version = "~> 1.8.3"
 }
