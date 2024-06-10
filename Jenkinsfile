@@ -20,8 +20,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn -s settings.xml -DskipTests install -DnexusPort=${NEXUSPORT}'
+                sh 'mvn -s settings.xml -DskipTests install'
             }
         }
     }
 }
+
