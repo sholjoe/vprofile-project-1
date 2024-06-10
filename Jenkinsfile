@@ -14,7 +14,6 @@ pipeline {
         NEXUSIP = '172.31.54.108'
         NEXUSPORT = '8081'
         NEXUS_GRP_REPO = 'vpro-maven-group'
-        NEXUS_LOGIN = 'nexuslogin'
     }
 
     stages {
@@ -37,7 +36,7 @@ pipeline {
                 sh 'echo NEXUS_GRP_REPO=$NEXUS_GRP_REPO'
 
                 // Run the Maven build
-                sh 'mvn clean install -DskipTests -s settings.xml'
+                sh 'mvn clean install -DskipTests -s $WORKSPACE/settings.xml'
             }
         }
     }
