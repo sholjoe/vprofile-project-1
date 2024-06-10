@@ -1,33 +1,34 @@
 <settings>
   <servers>
     <server>
-      <id>${SNAP_REPO}</id>
-      <username>${NEXUS_USER}</username>
-      <password>${NEXUS_PASS}</password>
+      <id>vprofile-snapshot</id>
+      <username>admin</username>
+      <password>admin123</password>
     </server>
     <server>
-      <id>${RELEASE_REPO}</id>
-      <username>${NEXUS_USER}</username>
-      <password>${NEXUS_PASS}</password>
+      <id>vprofile-release</id>
+      <username>admin</username>
+      <password>admin123</password>
     </server>
     <server>
-      <id>${CENTRAL_REPO}</id>
-      <username>${NEXUS_USER}</username>
-      <password>${NEXUS_PASS}</password>
+      <id>vpro-maven-central</id>
+      <username>admin</username>
+      <password>admin123</password>
     </server>
     <server>
-      <id>${NEXUS_GRP_REPO}</id>
-      <username>${NEXUS_USER}</username>
-      <password>${NEXUS_PASS}</password>
+      <id>vpro-maven-group</id>
+      <username>admin</username>
+      <password>admin123</password>
     </server>
   </servers>
 
   <mirrors>
     <mirror>
-      <id>${CENTRAL_REPO}</id>
-      <name>${CENTRAL_REPO}</name>
-      <url>http://${NEXUSIP}:${NEXUSPORT}/repository/${NEXUS_GRP_REPO}/</url>
+      <id>central</id>
+      <name>nexus</name>
+      <url>http://172.31.54.108:8081/repository/vpro-maven-group/</url>
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
 </settings>
+
